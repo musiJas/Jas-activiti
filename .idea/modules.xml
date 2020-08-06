@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jas-activiti-autofigure/jas-activiti-autofigure.iml" filepath="$PROJECT_DIR$/jas-activiti-autofigure/jas-activiti-autofigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jas-activiti-core/jas-activiti-core.iml" filepath="$PROJECT_DIR$/jas-activiti-core/jas-activiti-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jas-activiti-starter/jas-activiti-starter.iml" filepath="$PROJECT_DIR$/jas-activiti-starter/jas-activiti-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jas-activiti-web/jas-activiti-web.iml" filepath="$PROJECT_DIR$/jas-activiti-web/jas-activiti-web.iml" />
+    </modules>
+  </component>
+</project>
