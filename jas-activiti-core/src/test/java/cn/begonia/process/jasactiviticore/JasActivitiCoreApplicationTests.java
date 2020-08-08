@@ -1,12 +1,12 @@
 package cn.begonia.process.jasactiviticore;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class JasActivitiCoreApplicationTests {
 
-    @Test
+    //@Test
     void contextLoads() {
     }
 

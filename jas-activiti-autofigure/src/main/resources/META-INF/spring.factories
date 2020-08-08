@@ -1,2 +1,4 @@
 # Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.JasServiceAutoConfigure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.other.JasServiceAutoConfigure,\
+  cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.config.ActivitiConfig,\
+  cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.config.WebMvcConfigurer

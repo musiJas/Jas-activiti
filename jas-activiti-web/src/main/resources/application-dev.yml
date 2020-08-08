@@ -1,8 +1,45 @@
 server:
-  servlet:
-    context-path: /example
+  context-path: /example
   port: 8900
 
 spring:
   application:
-    name: spring-boot-assembly
+    name: jas-activiti-web
+  profiles:
+    active: dev
+    #数据源配置
+    datasource:
+      name: jas-activiti
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://94.191.4.62:3306/jas-activiti?useUnicode=true&useSSL=false&amp;characterEncoding=utf8&allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+    #freemarker模板配置
+
+  freemarker:
+    cache: false
+    charset: utf-8
+    request-context-attribute: ctx
+    suffix: .ftl
+    content-type: text/html
+    template-loader-path:  classpath:/templates/
+
+
+  activiti:
+    check-process-definitions: false
+
+# mybatis公共配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: cn.begonia.process.jasactivitiweb.entity
+
+
+security:
+  user:
+    name: root
+    password: root
+  basic:
+    enabled: false

@@ -1,16 +1,13 @@
 server:
-  servlet:
-    context-path: /example
-  tomcat:
-    uri-encoding: UTF-8
+  context-path: /jas-activiti
 
 begonia:
   starter:
     suffix:  good  morning
-
+    contextPath: ${server.context-path}
 spring:
   application:
-    name: spring-boot-assembly
+    name: jas-activiti-web
 
   # 当前maven打包的profile
   profiles:
@@ -26,8 +23,4 @@ spring:
 hello: Hello spring-boot-assembly
 
 
-# mybatis公共配置
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: true
+

@@ -1,1 +1,0 @@
-console.log("hello spring-boot-assembly");

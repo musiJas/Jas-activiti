@@ -23,7 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
-      <module name="jas-activiti-autofigure" options="-parameters" />
+      <module name="jas-activiti-autofigure" options="" />
       <module name="jas-activiti-core" options="-parameters" />
       <module name="jas-activiti-starter" options="" />
       <module name="jas-activiti-web" options="" />
