@@ -26,8 +26,6 @@
             <artifactId>jas-activiti-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
 
     <!--MAVEN打包选择运行环境-->

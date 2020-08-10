@@ -20,20 +20,23 @@ var KISBPM = KISBPM || {};
 
 KISBPM.URL = {
     getModel: function (modelId) {
-        return this.getContextPath()+ ACTIVITI.CONFIG.contextRoot + '/model/' + modelId + '/json';
+        console.log("info..."+ACTIVITI.CONFIG.getContextPath());
+        return  ACTIVITI.CONFIG.getContextPath() + '/model/' + modelId + '/json';
     },
     getStencilSet: function () {
-        return this.getContextPath()+ACTIVITI.CONFIG.contextRoot + '/editor/stencilset?version=' + Date.now();
+        console.log("info..."+ACTIVITI.CONFIG.getContextPath());
+        return  ACTIVITI.CONFIG.getContextPath() + '/editor/stencilset?version=' + Date.now();
     },
     putModel: function (modelId) {
-        return this.getContextPath()+ACTIVITI.CONFIG.contextRoot + '/model/' + modelId + '/save';
+        console.log("info..."+ACTIVITI.CONFIG.getContextPath());
+        return  ACTIVITI.CONFIG.getContextPath() + '/model/' + modelId + '/save';
     },
     getContextPath: function () {
          let  url=window.location.href;
          url= url.replace("http://",'').replace("https://",'');
          url=url.substring(url.indexOf('/')+1,url.length);
          let  contextPath=url.substring(0,url.indexOf('/'));
-         console.info(' contextPath .'+url);
+         console.info(' contextPath '+contextPath);
          return  "/"+contextPath;
     }
 };

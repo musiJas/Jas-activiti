@@ -7,6 +7,7 @@ import cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.controller
 import cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.controller.editor.StencilsetRestResource;
 import cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.other.JasProperties;
 import cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.other.JasService;
+import cn.begonia.project.autoconfigure.jasactivitiautofigure.starter.util.JasContextAwareUtil;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.impl.history.HistoryLevel;
 import org.activiti.spring.SpringProcessEngineConfiguration;
@@ -21,6 +22,7 @@ import javax.sql.DataSource;
 /**
  */
 @SuppressWarnings("all")
+@ConditionalOnWebApplication
 @EnableConfigurationProperties(JasProperties.class)
 @Configuration
 public class ActivitiConfig {
@@ -52,6 +54,10 @@ public class ActivitiConfig {
         configuration.setLabelFontName("宋体");
         configuration.setTransactionManager(transactionManager);
         return configuration;
+    }
+    @Bean
+    public JasContextAwareUtil  initialContextAware(){
+        return  new JasContextAwareUtil();
     }
 
     @Bean

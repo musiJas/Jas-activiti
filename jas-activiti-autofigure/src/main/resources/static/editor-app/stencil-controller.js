@@ -63,7 +63,7 @@ angular.module('activitiModeler')
              StencilSet items
              */
             $http({method: 'GET', url: KISBPM.URL.getStencilSet()}).success(function (data, status, headers, config) {
-
+                console.info("info---"+KISBPM.URL.getStencilSet());
             	var quickMenuDefinition = ['UserTask', 'EndNoneEvent', 'ExclusiveGateway', 
             	                           'CatchTimerEvent', 'ThrowNoneEvent', 'TextAnnotation',
             	                           'SequenceFlow', 'Association'];

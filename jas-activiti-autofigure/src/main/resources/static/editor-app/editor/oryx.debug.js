@@ -1787,6 +1787,8 @@ ORYX.CONFIG.LIBS_PATH =					"libs";
  * Regular Config
  */	
 ORYX.CONFIG.SERVER_HANDLER_ROOT = 			"service";
+/*ORYX.CONFIG.SERVER_HANDLER_ROOT   =         ACTIVITI.CONFIG.getContextPath();*/
+
 ORYX.CONFIG.SERVER_EDITOR_HANDLER =			ORYX.CONFIG.SERVER_HANDLER_ROOT + "/editor";
 ORYX.CONFIG.SERVER_MODEL_HANDLER =			ORYX.CONFIG.SERVER_HANDLER_ROOT + "/model";
 ORYX.CONFIG.STENCILSET_HANDLER = 			ORYX.CONFIG.SERVER_HANDLER_ROOT + "/editor_stencilset?embedsvg=true&url=true&namespace=";    
@@ -8187,7 +8189,7 @@ ORYX.Core.StencilSet.StencilSet = Clazz.extend({
 			this._baseUrl = "editor/stencilsets/bpmn2.0/";
 			this._source = "stencilsets/bpmn2.0/bpmn2.0.json";
 			
-			new Ajax.Request(ACTIVITI.CONFIG.contextRoot + '/editor/stencilset?version=' + Date.now(), {
+			new Ajax.Request(ACTIVITI.CONFIG.getContextPath() + '/editor/stencilset?version=' + Date.now(), {
 	            asynchronous: false,
 	            method: 'get',
 	            onSuccess: this._init.bind(this),
@@ -10910,6 +10912,7 @@ ORYX.Editor = {
 
 		// Load particular stencilset
 		if(ORYX.CONFIG.BACKEND_SWITCH) {
+			console.log(model.stencilset);
 			var ssUrl = (model.stencilset.namespace||model.stencilset.url).replace("#", "%23");
         	ORYX.Core.StencilSet.loadStencilSet(ssUrl, this.modelMetaData, this.id);
 		} else {

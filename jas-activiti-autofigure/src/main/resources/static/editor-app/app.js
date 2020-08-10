@@ -96,7 +96,7 @@ activitiModeler
             function fetchModel(modelId) {
 
                 var modelUrl = KISBPM.URL.getModel(modelId);
-
+                console.log("modelUrl:"+modelUrl);
                 $http({method: 'GET', url: modelUrl}).
                     success(function (data, status, headers, config) {
                         $rootScope.editor = new ORYX.Editor(data);

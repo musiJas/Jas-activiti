@@ -1,5 +1,5 @@
 server:
-  context-path: /example
+  context-path: /jas-activiti
   port: 8900
 
 spring:
@@ -7,16 +7,7 @@ spring:
     name: jas-activiti-web
   profiles:
     active: dev
-    #数据源配置
-    datasource:
-      name: jas-activiti
-      type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://94.191.4.62:3306/jas-activiti?useUnicode=true&useSSL=false&amp;characterEncoding=utf8&allowMultiQueries=true
-      username: root
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
     #freemarker模板配置
-
   freemarker:
     cache: false
     charset: utf-8
@@ -24,17 +15,24 @@ spring:
     suffix: .ftl
     content-type: text/html
     template-loader-path:  classpath:/templates/
-
-
   activiti:
     check-process-definitions: false
-
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://94.191.4.62:3306/jas-activiti?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: admin.520
+    name: jas-activiti
 # mybatis公共配置
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: true
-  type-aliases-package: cn.begonia.process.jasactivitiweb.entity
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  type-aliases-package: cn.begonia.process.jasactivitiweb.entity
+
+
+
 
 
 security:

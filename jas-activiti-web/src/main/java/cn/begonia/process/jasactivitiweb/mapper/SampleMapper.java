@@ -1,7 +1,6 @@
 package cn.begonia.process.jasactivitiweb.mapper;
 
 import org.springframework.stereotype.Repository;
-
 /**
  * <p>
  *     系统用户Mapper

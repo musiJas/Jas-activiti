@@ -14,9 +14,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="1.7" />
-      <module name="jas-activiti-autofigure" target="1.7" />
-      <module name="jas-activiti-core" target="1.7" />
-      <module name="jas-activiti-starter" target="1.7" />
+      <module name="jas-activiti-autofigure" target="1.8" />
+      <module name="jas-activiti-core" target="1.8" />
+      <module name="jas-activiti-starter" target="1.8" />
       <module name="jas-activiti-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -24,7 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="jas-activiti-autofigure" options="" />
-      <module name="jas-activiti-core" options="-parameters" />
+      <module name="jas-activiti-core" options="" />
       <module name="jas-activiti-starter" options="" />
       <module name="jas-activiti-web" options="" />
     </option>

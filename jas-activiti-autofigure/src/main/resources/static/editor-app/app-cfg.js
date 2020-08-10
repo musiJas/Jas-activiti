@@ -22,4 +22,8 @@ var ACTIVITI = ACTIVITI || {};
 
 ACTIVITI.CONFIG = {
 	'contextRoot' : '/service',
+	 getContextPath : function(){
+		console.info("Context Path..."+KISBPM.URL.getContextPath());
+		return  KISBPM.URL.getContextPath()+this.contextRoot;
+	 }
 };
